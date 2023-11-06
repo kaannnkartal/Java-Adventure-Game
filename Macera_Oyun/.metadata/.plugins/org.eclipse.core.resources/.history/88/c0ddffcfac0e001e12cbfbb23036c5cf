@@ -1,0 +1,12 @@
+
+public abstract class Location {
+
+	protected Player player;
+	protected Character character;
+	protected String name;
+	
+	
+	Location(Character character){
+		this.character = character;
+	}
+}

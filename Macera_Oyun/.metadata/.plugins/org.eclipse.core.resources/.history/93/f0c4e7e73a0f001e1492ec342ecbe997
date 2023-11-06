@@ -1,0 +1,46 @@
+
+public class Tabanca extends Weapon {
+
+	private String weaponType = "tabanca";
+	private int damage = 2, price = 25;
+	
+	
+	Tabanca() {
+		super(getWeapontype, damage, price);
+	}
+
+
+	public String getWeaponType() {
+		return weaponType;
+	}
+
+
+	public void setWeaponType(String weaponType) {
+		this.weaponType = weaponType;
+	}
+
+
+	public int getDamage() {
+		return damage;
+	}
+
+
+	public void setDamage(int damage) {
+		this.damage = damage;
+	}
+
+
+	public int getPrice() {
+		return price;
+	}
+
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+	
+	
+
+	
+}

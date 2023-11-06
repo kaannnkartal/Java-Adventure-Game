@@ -1,0 +1,8 @@
+
+public abstract class Obstacle {
+
+	protected int id, damage, healthy,money;
+	
+	
+	
+}

@@ -1,0 +1,11 @@
+
+public abstract class NormalLocation extends Location {
+
+	NormalLocation(Character character) {
+		super(character);
+
+	}
+	
+	
+
+}

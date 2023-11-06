@@ -1,0 +1,15 @@
+
+public class River extends BattleLocation{
+
+	River(Character character) {
+		super(character, "River");
+
+	}
+
+	@Override
+	public boolean getLocation() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

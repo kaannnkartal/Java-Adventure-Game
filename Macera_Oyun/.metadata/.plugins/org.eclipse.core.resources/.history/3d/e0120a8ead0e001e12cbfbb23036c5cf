@@ -1,0 +1,14 @@
+
+public abstract class NormalLocation extends Location {
+
+	NormalLocation(Character character) {
+		super(character);
+
+	}
+
+	public boolean getLocation() {
+		return true;
+	}
+	
+
+}

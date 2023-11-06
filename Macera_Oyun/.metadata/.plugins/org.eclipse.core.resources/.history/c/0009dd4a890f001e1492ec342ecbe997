@@ -1,0 +1,10 @@
+
+public class Ayi extends Obstacle {
+
+	public Ayi(String name, int id, int damage, int healthy, int money) {
+		super("Ayi", 3, 7, 20, 12);
+	}
+	
+	
+
+}

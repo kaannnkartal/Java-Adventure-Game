@@ -1,0 +1,13 @@
+
+public class SafeHouse extends Location {
+
+	SafeHouse(Character character) {
+		super(character,"Guvenli Ev");
+		
+	}
+	
+	@Override
+
+	
+
+}

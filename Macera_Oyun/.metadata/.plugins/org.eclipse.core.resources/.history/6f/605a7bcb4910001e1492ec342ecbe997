@@ -1,0 +1,40 @@
+
+public class Forest extends BattleLocation {
+
+	public Ayi ayi;
+	Forest(Character character) {
+		
+		super(character, "Forest", getAyi());
+		
+	}
+
+	
+	
+	/*@Override
+	public boolean getLocation() {
+		
+		System.out.println("Suan buradasiniz : " + this.getName());
+		System.out.println("Dillatki ol! Burada " + ayi.obstacleNumber() + " tane " + ayi.getName() + " yasiyor");
+		System.out.println("<S>avas veya <K>ac");
+		
+		String selectionCase = scan.next();
+		
+		if(selectionCase == "S" || selectionCase == "s") {
+			if(combat(ayi.randomObstacle(ayi.obstacleNumber()))) {
+				System.out.println("Tum dusmanlar temizlendi!!");
+			}
+			else
+				System.out.println("Oldun cik kardesim seri");
+		}
+		
+		
+		return true;
+	} */
+	
+	
+	
+	
+
+	
+	
+}

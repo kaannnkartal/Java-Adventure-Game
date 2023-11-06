@@ -1,0 +1,8 @@
+
+public class Sovalye extends Character{
+
+	public Sovalye(int damage, int healthy, int money, int id) {
+		super(damage, healthy, money, id);
+	}
+
+}

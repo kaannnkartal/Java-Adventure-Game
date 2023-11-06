@@ -1,0 +1,95 @@
+
+public class Player {
+
+	private int damage, healthy, money;
+	private String name, charName;
+	private Inventory inv;
+	
+	
+	
+	
+	public Player(String name) {
+		this.name = name;
+	}
+	
+	
+	public void selectChar() {
+		
+		charMenu();
+		
+	}
+	
+	public void charMenu() {
+		
+		System.out.println("Lutfen 1 karakter seciniz : ");
+		System.out.println("Turu : Samura, Hasar : 5, Saglik : 21, Para : 15");
+	}
+
+
+	public int getDamage() {
+		return damage;
+	}
+
+
+	public void setDamage(int damage) {
+		this.damage = damage;
+	}
+
+
+	public int getHealthy() {
+		return healthy;
+	}
+
+
+	public void setHealthy(int healthy) {
+		this.healthy = healthy;
+	}
+
+
+	public int getMoney() {
+		return money;
+	}
+
+
+	public void setMoney(int money) {
+		this.money = money;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getCharName() {
+		return charName;
+	}
+
+
+	public void setCharName(String charName) {
+		this.charName = charName;
+	}
+
+
+	public Inventory getInv() {
+		return inv;
+	}
+
+
+	public void setInv(Inventory inv) {
+		this.inv = inv;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

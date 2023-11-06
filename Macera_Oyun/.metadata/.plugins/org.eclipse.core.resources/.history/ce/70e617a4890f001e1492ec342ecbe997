@@ -1,0 +1,12 @@
+
+public class Forest extends BattleLocation {
+
+	protected Ayi ayi;
+	Forest(Character character) {
+		super(character, "Forest");
+		ayi = new Ayi();
+	}
+
+	
+	
+}

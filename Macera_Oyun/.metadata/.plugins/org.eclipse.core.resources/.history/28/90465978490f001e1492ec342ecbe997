@@ -1,0 +1,110 @@
+
+public class ToolStore extends NormalLocation {
+	
+
+
+	ToolStore(Character character) {
+		super(character, "Magaza");
+		
+	}
+
+	
+	public boolean getLocation() {
+		
+		toolMenu();
+		
+		
+		return true;
+	}
+	
+	
+	public void toolMenu() {
+		
+		System.out.println("Para : "+ character.getMoney());
+		System.out.println("1. Silahlar ");
+		System.out.println("2. Zırhlar ");
+		System.out.println("3. Cikis ");
+		
+		System.out.print("Seçiminiz : ");
+		int choice = scan.nextInt();
+		int selectItemID;
+		switch (choice){
+		case 1:
+			selectItemID = weaponMenu();
+			buyWeapon(selectItemID);
+		
+		
+		}
+	}
+	
+	
+	public int weaponMenu() {
+		
+		System.out.println("1. Tabanca <Para : 25 - Hasar : 2> ");
+		System.out.println("2. Kılıc <Para : 35 - Hasar : 3> ");
+		System.out.println("3. Tufek <Para : 45 - Hasar : 7> ");
+		System.out.println("4. Cikis");
+		
+		System.out.println("Silah seciniz : ");
+		
+		int selectionWeapon = scan.nextInt();
+		
+		return selectionWeapon;
+		
+	}
+	
+	public void buyWeapon (int itemID) {
+		if (itemID > 0 || itemID < 4) {
+			switch (itemID) {
+			case 1:
+				Weapon tabanca = new Tabanca();				
+				if(character.getMoney() >=  tabanca.getPrice()) {
+					
+					player.getInv().setWeaponName(tabanca.getWeaponType());
+					player.getInv().setDamage(tabanca.getDamage());
+					character.setMoney(character.getMoney() - tabanca.getPrice());
+				}
+				else {
+					System.out.println("Yetersiz para! Silah satın alınamadı.!");
+				}
+				break;
+			case 2:
+				Weapon kilic = new Kilic();	
+				if(character.getMoney() >=  kilic.getPrice()) {
+					
+					player.getInv().setWeaponName(kilic.getWeaponType());
+					player.getInv().setDamage(kilic.getDamage());
+					character.setMoney(character.getMoney() - kilic.getPrice());
+				}
+				else {
+					System.out.println("Yetersiz para! Silah satın alınamadı.!");
+				}
+				break;
+			case 3:
+				Weapon tufek =new Tufek();
+				
+				if(character.getMoney() >=  tufek.getPrice()) {
+					
+					player.getInv().setWeaponName(tufek.getWeaponType());
+					player.getInv().setDamage(tufek.getDamage());
+					character.setMoney(character.getMoney() - tufek.getPrice());
+				}
+				else {
+					System.out.println("Yetersiz para! Silah satın alınamadı.!");
+				}
+				break;
+			case 4:
+				System.out.println("Cikis yapiliyor");
+				break;
+			}
+		}
+		else {
+			System.out.println("Gecersiz islem");
+		}
+	}
+	
+	
+	
+	
+
+}

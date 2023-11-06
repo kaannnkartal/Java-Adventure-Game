@@ -1,0 +1,25 @@
+
+public class Forest extends BattleLocation {
+
+	protected Ayi ayi;
+	Forest(Character character) {
+		super(character, "Forest");
+		ayi = new Ayi();
+	}
+	
+	
+	
+	@Override
+	public boolean getLocation() {
+		
+		System.out.println("Şuan buradasınız : " + this.getName());
+		System.out.println("Dillatki ol! Burada " + ayi.obstacleNumber() + " tane " + ayi.getName());
+		return false;
+	}
+	
+	
+	
+
+	
+	
+}

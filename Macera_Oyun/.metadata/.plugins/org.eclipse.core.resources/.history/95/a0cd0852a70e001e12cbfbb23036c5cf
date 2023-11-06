@@ -1,0 +1,8 @@
+
+public class Okcu extends Character {
+
+	public Okcu(int damage, int healthy, int money, int id) {
+		super(damage, healthy, money, id);
+	}
+
+}

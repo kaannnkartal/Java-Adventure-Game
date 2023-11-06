@@ -1,0 +1,102 @@
+
+public abstract class BattleLocation extends Location{
+
+	protected Obstacle obstacle;
+	protected int obsN;
+	protected int defaultObsHealth;
+	BattleLocation(Character character, String locationName, Obstacle obstacle) {
+		super(character,locationName);
+		this.obstacle = obstacle;
+	}
+	
+	
+	//public abstract boolean getLocation();
+	
+	
+	public boolean getLocation() {
+		
+		System.out.println("Suan buradasiniz : " + this.getName());
+		obsN = obstacle.randomObstacle(obstacle.obstacleNumber());
+		System.out.println("Dillatki ol! Burada " + obsN + " tane " + obstacle.getName() + " yasiyor");
+		System.out.println("<S>avas veya <K>ac");
+		
+		String selectionCase = scan.nextLine();
+		
+		 
+		if(selectionCase.equals("S") || selectionCase.equals("s")) {
+			if(combat(obsN)) {
+				System.out.println("Tum dusmanlar temizlendi!!");
+			}
+			else
+				System.out.println("Oldun cik kardesim seri");
+		}
+		
+		
+		return true;
+	}
+	
+	
+	public void playerStats() {
+		
+		System.out.println("Karakterinizin Statlari\n-----------");
+		System.out.println("Can : " + character.getHealthy());
+		System.out.println("Hasar : " + player.getTotalDamage());
+		System.out.println("Para : " + character.getMoney());
+		System.out.println("Silah " + player.getInv().getWeaponName());
+		System.out.println("Zirh : " + player.getInv().getArmorName());	
+		
+	}
+	
+	public void enemyStats() {
+		System.out.println(obstacle.getName()+ " Statlari\n-----------");
+		System.out.println("Can : " + obstacle.getHealthy());
+		System.out.println("Hasar : " + obstacle.getDamage());
+		System.out.println("Para odulu : " + obstacle.getMoney());
+	}
+	
+	public boolean combat(int obsCount) {
+		defaultObsHealth = obstacle.getHealthy();
+		playerStats();
+		for(int i=0; i<obsCount; i++) {
+			
+			enemyStats();
+			while(character.getHealthy() > 0 && obstacle.getHealthy() > 0) {
+				System.out.println("<V>ur veya <K>ac");
+				String selCase = scan.nextLine();
+				
+				if(selCase.equals("V") && selCase.equals("v")) {
+					System.out.println("Siz vurdunuz !");
+					obstacle.setHealthy(obstacle.getHealthy()-player.getTotalDamage());
+					afterHit();
+					if(obstacle.getHealthy() > 0) {
+						System.out.println();
+						System.out.println("Canavar size vurdu !");
+						character.setHealthy(character.getHealthy() - (obstacle.getDamage() - player.getInv().getArmor()));
+						afterHit();	
+					}
+
+				}
+				else
+					break;
+			}
+			
+			if (obstacle.getHealthy() <= 0 && character.getHealthy() > 0) {
+				System.out.println("Tum dusmanlari yendiniz !");
+				character.setMoney(character.getMoney() + obstacle.getMoney());
+				System.out.println("Guncel Paraniz : " + character.getMoney());
+				obstacle.setHealthy(defaultObsHealth);
+			}
+
+		}
+		
+		return true;
+	}
+	
+	
+	public void afterHit() {
+		System.out.println("Oyuncu Cani : " + character.getHealthy());
+		System.out.println(obstacle.getName() + " Cani : " + obstacle.getHealthy());
+		
+	}
+
+}

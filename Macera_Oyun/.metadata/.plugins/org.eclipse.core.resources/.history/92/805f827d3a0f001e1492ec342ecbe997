@@ -1,0 +1,17 @@
+
+public abstract class Weapon {
+	
+	protected String weaponType;
+	protected int damage, price;
+	
+	
+	
+	Weapon(String weaponType, int damage, int price){
+		this.weaponType = weaponType;
+		this.damage = damage;
+		this.money = money;
+		
+	}
+	
+
+}

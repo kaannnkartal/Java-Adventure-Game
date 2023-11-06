@@ -1,0 +1,13 @@
+
+public class Tabanca extends Weapon {
+
+	private String weaponType = "tabanca";
+	private int damage = 2, price = 25;
+	
+	
+	Tabanca() {
+		super(weaponType, damage, price);
+	}
+
+	
+}

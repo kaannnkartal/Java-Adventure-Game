@@ -1,0 +1,21 @@
+
+public class River extends BattleLocation{
+
+	protected Vampir vampir;
+	
+	River(Character character) {
+		super(character, "River");
+		
+		vampir = new Vampir();
+
+	}
+
+	@Override
+	public boolean getLocation() {
+		
+		
+		
+		return false;
+	}
+
+}

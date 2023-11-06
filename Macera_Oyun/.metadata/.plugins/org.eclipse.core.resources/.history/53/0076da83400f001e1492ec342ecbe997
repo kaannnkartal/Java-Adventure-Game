@@ -1,0 +1,11 @@
+
+public class Kılıc extends Weapon {
+
+	Kılıc() {
+		super("Kılıc", 3, 35);
+
+	}
+	
+	
+
+}

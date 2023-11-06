@@ -1,0 +1,14 @@
+
+public abstract class Weapon {
+	
+	protected String weaponType;
+	protected int damage, money;
+	
+	
+	
+	Weapon(String weaponType, int damage, int money){
+		
+	}
+	
+
+}

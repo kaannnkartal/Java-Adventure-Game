@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		System.out.println("Macera oyununa hosgeldiniz !");
+		System.out.println("Oyuna başlamadan önce isminizi giriniz : ");
+		Scanner scan = new Scanner(System.in);
+		String playerName = scan.nextLine();
+		
+		Game game = new Game();
+		Player player = new Player (playerName);
+		
+		
+		
+		
+
+	}
+
+}

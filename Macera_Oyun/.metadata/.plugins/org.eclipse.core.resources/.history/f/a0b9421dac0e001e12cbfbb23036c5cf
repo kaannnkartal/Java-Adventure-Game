@@ -1,0 +1,7 @@
+
+public abstract class Location {
+
+	Player player;
+	Character character;
+	
+}

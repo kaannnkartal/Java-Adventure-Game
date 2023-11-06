@@ -1,0 +1,15 @@
+
+public  abstract class NormalLocation extends Location {
+
+	NormalLocation(Character character, String locationName) {
+		super(character, locationName);
+
+	}
+
+
+	
+	
+	
+	
+
+}

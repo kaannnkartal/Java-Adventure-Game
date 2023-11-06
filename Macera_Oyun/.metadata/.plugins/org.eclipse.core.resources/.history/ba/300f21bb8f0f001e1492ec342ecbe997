@@ -1,0 +1,21 @@
+
+public class Cave extends BattleLocation {
+	
+	protected Zombi zombi;
+
+	Cave(Character character) {
+		super(character, "Cave");
+		zombi = new Zombi();
+		
+		
+	}
+
+	@Override
+	public boolean getLocation() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
+
+}

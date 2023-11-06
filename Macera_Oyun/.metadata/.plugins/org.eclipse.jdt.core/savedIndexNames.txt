@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\KAAN\WorkSpace\Macera_Oyun\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+31278115.index
+2170606631.index

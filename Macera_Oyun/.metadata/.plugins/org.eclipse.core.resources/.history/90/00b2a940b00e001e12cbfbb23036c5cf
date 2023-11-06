@@ -1,0 +1,99 @@
+import java.util.Scanner;
+
+public class Player {
+
+	private Character character;
+	private String name;
+	private Inventory inv;
+	
+	Scanner scan = new Scanner(System.in);
+	
+	
+	public Player(String name) {
+		this.name = name;
+		this.inv = new inventory();
+	}
+	
+	
+	public void selectChar() {
+
+		// Polymorphism kullanılmış oldu.
+		switch(charMenu()) {
+		case 1:
+			character = new Samuray(5, 21, 15, 1);
+			break;
+			
+		case 2:
+			character = new Okcu(7,18,20,2);
+			break;
+		case 3:
+			character = new Sovalye(8,24,5,3);
+			break;
+
+			}
+		
+		System.out.println(character.statusChar());
+		
+		
+	}
+	
+	
+	public int charMenu() {
+		
+		System.out.println("Lutfen 1 karakter seciniz : ");
+		System.out.println("1-Samuray \t Hasar : 5 \t Saglik : 21 \t Para : 15");
+		System.out.println("2-Okcu \t\t Hasar : 7 \t Saglik : 18 \t Para : 20");
+		System.out.println("3-Sovalye \t Hasar : 8 \t Saglik : 24 \t Para : 5");
+		
+		System.out.print("Karakter Seciminiz : ");
+		int charID = scan.nextInt();
+		
+		while(charID < 1|| charID > 3) {
+			System.out.print("Lutfen gecerli bir karakter seciniz  : ");
+			charID = scan.nextInt();
+		}
+		
+		return charID;
+	}
+
+
+	public Character getCharacter() {
+		return character;
+	}
+
+
+	public void setCharacter(Character character) {
+		this.character = character;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+
+	public Inventory getInv() {
+		return inv;
+	}
+
+
+	public void setInv(Inventory inv) {
+		this.inv = inv;
+	}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+}

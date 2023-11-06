@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class Game {
+
+	Player player;
+	Location location;
+	Scanner scan = new Scanner(System.in);
+	
+	
+	public void login() {
+		System.out.println("Macera oyununa hosgeldiniz !");
+		System.out.print("Oyuna baslamadan once isminizi giriniz : ");
+		Scanner scan = new Scanner(System.in);
+		String playerName = scan.nextLine();
+		
+		player = new Player (playerName);
+		player.selectChar();
+		
+		start();
+	
+	}
+	
+	public void start() {
+		
+		System.out.println();
+		System.out.println("===========================");
+		System.out.println();
+		System.out.println("Eylem gerceklestirmek icin bir yer seçiniz : ");
+		System.out.println("1. Guvenli Ev --> Size ait guvenli bir mekan, dusman yok !");
+		System.out.println("2. Magara --> Karsiniza belki zombi cikabilir !");
+		System.out.println("3, Orman --> Karsiniza belki vampir cikabilir ! ");
+		System.out.println("4. Nehir --> Karsiniza belki ay cikabilir !");
+		System.out.println("5. Magaza --> Silah veya Zirh alabilirsiniz !");
+		
+		System.out.print("Gitmek istediginiz yer : ");
+		int choice = scan.nextInt();
+		
+		while (choice < 0 || choice > 5) {
+			System.out.print("Lutfen gecerli bir aktivite seciniz : ");
+			choice = scan.nextInt();
+		}
+		
+		switch(choice) {
+		
+		case 1:
+			location = new SafeHouse(;)
+		}
+		
+		
+	}
+	  
+}

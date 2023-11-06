@@ -1,0 +1,16 @@
+
+public class SafeHouse extends NormalLocation {
+
+	SafeHouse(Character character) {
+		super(character,"Guvenli Ev");
+		
+	}
+	
+	public boolean getLocation() {
+		character.setHealthy(character.getMaxHealth());
+		
+		return true;
+	}
+	
+
+}

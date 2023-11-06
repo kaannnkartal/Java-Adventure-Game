@@ -1,0 +1,108 @@
+import java.util.Scanner;
+
+public class Player {
+
+	private int damage, healthy, money;
+	private String name, charName;
+	private Inventory inv;
+	
+	Scanner scan = new Scanner(System.in);
+	
+	
+	public Player(String name) {
+		this.name = name;
+	}
+	
+	
+	public void selectChar() {
+		
+		charMenu();
+		
+	}
+	
+	public int charMenu() {
+		
+		System.out.println("Lutfen 1 karakter seciniz : ");
+		System.out.println("1-Samuray \t Hasar : 5 \t Saglik : 21 \t Para : 15");
+		System.out.println("2-Okcu \t\t Hasar : 7 \t Saglik : 18 \t Para : 20");
+		System.out.println("3-Sovalye \t Hasar : 8 \t Saglik : 24 \t Para : 5");
+		
+		System.out.print("Karakter Seciminiz : ");
+		int charID = scan.nextInt();
+		
+		while(charID < 1|| charID > 3) {
+			System.out.print("Lutfen gecerli bir karakter seciniz  : ");
+			charID = scan.nextInt();
+		}
+		
+		return charID;
+	}
+
+
+	public int getDamage() {
+		return damage;
+	}
+
+
+	public void setDamage(int damage) {
+		this.damage = damage;
+	}
+
+
+	public int getHealthy() {
+		return healthy;
+	}
+
+
+	public void setHealthy(int healthy) {
+		this.healthy = healthy;
+	}
+
+
+	public int getMoney() {
+		return money;
+	}
+
+
+	public void setMoney(int money) {
+		this.money = money;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getCharName() {
+		return charName;
+	}
+
+
+	public void setCharName(String charName) {
+		this.charName = charName;
+	}
+
+
+	public Inventory getInv() {
+		return inv;
+	}
+
+
+	public void setInv(Inventory inv) {
+		this.inv = inv;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

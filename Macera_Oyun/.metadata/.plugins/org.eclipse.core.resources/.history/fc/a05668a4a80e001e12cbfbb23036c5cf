@@ -1,0 +1,9 @@
+
+public class Sovalye extends Character{
+
+	String type = "Sovalye";
+	public Sovalye(int damage, int healthy, int money, int id) {
+		super(damage, healthy, money, id);
+	}
+
+}
